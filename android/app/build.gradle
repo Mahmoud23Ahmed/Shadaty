@@ -1,0 +1,82 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+// Load local.properties
+def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
+def Properties localProperties = new Properties()
+localPropertiesFile.withInputStream { stream ->
+    localProperties.load(stream)
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    compileSdkVersion 34
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    
+    defaultConfig {
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+        applicationId "com.tiger.shadaty1"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 7
+        versionName "1.4"
+        renderscriptTargetApi 34
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22'
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+        force 'androidx.core:core-ktx:1.6.0'
+        eachDependency {
+            if ((requested.group == "org.jetbrains.kotlin") && (requested.name.startsWith("kotlin-stdlib"))) {
+                useVersion("1.8.0")
+            }
+        }
+    }
+}

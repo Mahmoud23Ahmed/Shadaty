@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "828363888658",
+    "project_id": "shadaty-64e15",
+    "storage_bucket": "shadaty-64e15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828363888658:android:af09808ddf4de7451ce0cb",
+        "android_client_info": {
+          "package_name": "com.tiger.shadaty1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828363888658-hdqgp4d1o5il2rta942hsjrsgt8d4ph6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiger.shadaty1",
+            "certificate_hash": "32a215554da191398b6a5e67343572f0a35b6bc8"
+          }
+        },
+        {
+          "client_id": "828363888658-17mf8jhuiri1gsen364agdl110heoakk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf39CZOGYmT9tCPf_mOurWfTAry9oYP40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828363888658-17mf8jhuiri1gsen364agdl110heoakk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "828363888658-bgrb5i0t1jvhgs2macputasik2shg38d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.luckywheel1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828363888658:android:52503bb12660d0c11ce0cb",
+        "android_client_info": {
+          "package_name": "com.tiger.shadaty1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828363888658-17mf8jhuiri1gsen364agdl110heoakk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf39CZOGYmT9tCPf_mOurWfTAry9oYP40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828363888658-17mf8jhuiri1gsen364agdl110heoakk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "828363888658-bgrb5i0t1jvhgs2macputasik2shg38d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.luckywheel1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
